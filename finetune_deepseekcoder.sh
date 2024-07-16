@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define paths
-DATA_PATH="/home/ben/DeepSeek-Coder/incorrect_responses_evolution_1.json"
-OUTPUT_PATH="/home/ben/DeepSeek-Coder/output"
+DATA_PATH="/home/ben/Desktop/DeepSeek-Coder/incorrect_responses_evolution_1.json"
+OUTPUT_PATH="/home/ben/Desktop/DeepSeek-Coder/output"
 MODEL="deepseek-ai/deepseek-coder-6.7b-instruct"
 
 # Change directory to finetune
