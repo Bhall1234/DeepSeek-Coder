@@ -10,6 +10,8 @@ cd finetune
 
 # batchsize was 16
 # gradient_accumulation_steps was 4
+# at the bottom   --bf16 True
+# REMEMBER TO CHANGE THE DEEPSPEED CONFIG!
 
 # Run the finetuning script with DeepSpeed
 deepspeed finetune_deepseekcoder.py \
@@ -20,7 +22,7 @@ deepspeed finetune_deepseekcoder.py \
     --model_max_length 1024 \
     --per_device_train_batch_size 8 \
     --per_device_eval_batch_size 1 \
-    --gradient_accumulation_steps 8 \
+    --gradient_accumulation_steps 16 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
     --save_steps 100 \
@@ -31,5 +33,5 @@ deepspeed finetune_deepseekcoder.py \
     --lr_scheduler_type "cosine" \
     --gradient_checkpointing True \
     --report_to "tensorboard" \
-    --deepspeed configs/ds_config_zero3.json \
+    --deepspeed configs/ds_config_zero3_v2.json \
     --bf16 True
