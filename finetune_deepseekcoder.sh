@@ -33,5 +33,5 @@ deepspeed finetune_deepseekcoder.py \
     --lr_scheduler_type "cosine" \
     --gradient_checkpointing True \
     --report_to "tensorboard" \
-    --deepspeed configs/ds_config_zero3_v2.json \
+    --deepspeed configs/ds_config_zero3.json \
     --bf16 True
