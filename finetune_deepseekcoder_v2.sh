@@ -1,18 +1,15 @@
 #!/bin/bash
-#SBATCH --job-name=finetune_deepseekcoder
-#SBATCH --partition=amp48         # Select the appropriate partition
-#SBATCH --qos=amp48               # Select the appropriate QoS
-#SBATCH --gres=gpu:1              # Request a single GPU (adjust as needed)
-#SBATCH --time=24:00:00           # Set a time limit (adjust as needed)
-#SBATCH --output=finetune_deepseekcoder.out
-#SBATCH --error=finetune_deepseekcoder.err
+#SBATCH --partition=amp48         
+#SBATCH --qos=amp48              
+#SBATCH --gpus 4              
+#SBATCH -c8 -- mem=64gb
 
 # Load necessary modules
-module load conda
-conda activate deepspeed_env
+#module load conda
+#conda activate deepspeed_env
 
 # Navigate to the repository directory
-cd $SLURM_SUBMIT_DIR
+#cd $SLURM_SUBMIT_DIR
 
 # Run the finetuning script
 deepspeed finetune/finetune_deepseekcoder.py \
