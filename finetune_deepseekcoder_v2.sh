@@ -13,7 +13,7 @@
 
 # Run the finetuning script
 deepspeed finetune/finetune_deepseekcoder.py \
-    --model_name_or_path deepseek-ai/deepseek-coder-6.7b-instruct \
+    --model_name_or_path deepseek-ai/deepseek-coder-1.3b-instruct \
     --data_path /path/to/your/data.json \
     --output_dir /path/to/output_dir \
     --num_train_epochs 3 \
