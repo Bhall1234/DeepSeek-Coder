@@ -8,6 +8,14 @@ MODEL="deepseek-ai/deepseek-coder-1.3b-instruct"
 # Change directory to finetune
 cd finetune
 
+# RUN 1 (ORIGINAL/UNEDITED)
+# per_device_train_batch_size was 16
+# gradient_accumulation_steps was 4
+# at the bottom   --bf16 True
+# logging_steps was 100
+# save_total_limit was 100
+
+# RUN 2
 # per_device_train_batch_size was 16
 # gradient_accumulation_steps was 4
 # at the bottom   --bf16 True
@@ -21,13 +29,13 @@ deepspeed finetune_deepseekcoder.py \
     --output_dir $OUTPUT_PATH \
     --num_train_epochs 3 \
     --model_max_length 1024 \
-    --per_device_train_batch_size 4 \
+    --per_device_train_batch_size 1 \
     --per_device_eval_batch_size 1 \
-    --gradient_accumulation_steps 16 \
+    --gradient_accumulation_steps 32 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
     --save_steps 100 \
-    --save_total_limit 100 \
+    --save_total_limit 2 \
     --learning_rate 2e-5 \
     --warmup_steps 10 \
     --logging_steps 10 \
