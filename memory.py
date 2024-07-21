@@ -60,3 +60,7 @@ SW: Model with 6608M total params, 132M largest layer params.
     1.48GB |  55.88GB | offload_param=none, offload_optimizer=none, zero_init=1
    73.85GB |  55.88GB | offload_param=none, offload_optimizer=none, zero_init=0
 """
+
+
+# http://www.georgesung.com/ai/qlora-ift/
+# https://colab.research.google.com/drive/1IlpeofYD9EU6dNHyKKObZhIzkBMyqlUS
