@@ -7,7 +7,7 @@ model_path = "./OUTPUT"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 # Load the model with safetensors
-model = AutoModelForCausalLM.from_pretrained(model_path, use_safetensors=True)
+model = AutoModelForCausalLM.from_pretrained(model_path, use_safetensors=True, ignore_mismatched_sizes=True)
 
 # Example usage
 input_text = "Hello, world!"
