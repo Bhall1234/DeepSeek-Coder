@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Define paths
-DATA_PATH="/home/ben/Desktop/DeepSeek-Coder/incorrect_responses_evolution_1.json"
+#DATA_PATH="/home/ben/Desktop/DeepSeek-Coder/incorrect_responses_evolution_1.json"
+DATA_PATH="/home/ben/Desktop/DeepSeek-Coder/test.json"
 OUTPUT_PATH="/home/ben/Desktop/DeepSeek-Coder/output"
 MODEL="deepseek-ai/deepseek-coder-1.3b-instruct"
 
