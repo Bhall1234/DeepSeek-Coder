@@ -28,7 +28,7 @@ deepspeed finetune_deepseekcoder.py \
     --data_path $DATA_PATH \
     --output_dir $OUTPUT_PATH \
     --num_train_epochs 3 \
-    --model_max_length 1024 \
+    --model_max_length 16384 \
     --per_device_train_batch_size 1 \
     --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 32 \
