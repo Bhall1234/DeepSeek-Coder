@@ -23,7 +23,7 @@ You are an AI programming assistant, utilizing the DeepSeek Coder model, develop
 
 @dataclass
 class ModelArguments:
-    model_name_or_path: Optional[str] = field(default="deepseek-ai/deepseek-coder-1.3b-instruct")
+    model_name_or_path: Optional[str] = field(default="deepseek-ai/deepseek-coder-6.7b-instruct")
 
 @dataclass
 class DataArguments:
